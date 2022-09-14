@@ -7,7 +7,7 @@
 
 /* debug */
 body {
-  background-color: darkgray;
+  background-color: #a9a9a9;
 }
 /* debug */
 
@@ -21,6 +21,13 @@ ul{
 a{
   text-decoration: none;
   color: white;
+}
+
+
+
+ul li a:hover{
+  color: rgb(212, 212, 212);
+  text-decoration: underline;
 }
 
 
@@ -43,10 +50,12 @@ header .container{
   justify-content: space-between;
   align-items: center;
   height: 100%;
+
 }
 
 .selection ul {
   display: flex;
+  font-weight: 800;
 }
 .selection ul li a{
   padding-right: 10px;
@@ -88,13 +97,12 @@ main{
   display: inline-block;
   width: 440px;
   height: 600px;
-  padding: 45px 10px;
-  
-  
-  
-  
+  margin: 45px 10px;
 }
 
+.card .product:hover{
+  cursor: pointer;
+}
 /* PRODUCT */
 
 .product {
@@ -103,10 +111,25 @@ main{
 
 }
 .product img{
+  display: block;
   z-index: 0;
   max-width: 100%;
-
 }
+
+.product .hidden-img{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.product .hidden-img:hover{
+  opacity: 1;
+}
+
 .hearts ,.details{
   display: inline-block;
   position: absolute;
@@ -120,6 +143,14 @@ main{
   font-size: 40px;
   width: 50px;
   background-color: white;
+}
+
+.hearts a{
+  color: black;
+}
+
+.card .product .hearts a:hover{
+  color: red;
 }
 
 .details{
@@ -191,9 +222,13 @@ footer .container h3{
 .menu-social{
   color: white;
   text-align: center;
-}
 
+  
+}
+.menu-social h6{
+  padding-bottom: 15px;
+}
 .menu-social .social-icons .fa-brands{
-  padding: 0 2px;
+  padding: 2px;
 }
 /* /footer */
